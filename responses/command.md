@@ -68,7 +68,7 @@ class MyCommand extends BaseCommand {
 }
 ```
 
-```javascript [CommonJS]
+```javascript [index.js]
 const { BaseCommand } = require('kasumi.js');
 
 //...
@@ -162,20 +162,18 @@ $ node --nolazy -r ts-node/register -r tsconfig-paths/register index.ts | bunyan
 $ node index.ts | bunyan -L
 ```
 
+
+
+::: tip
+
+On default, Kasumi.js only prints message above `INFO` level. You can override that by specifing `LOG_LEVEL` environment variable
+
 :::
 
 You can now send a message to your bot and expect its reply.
 
 ```txt
-You: /echo
-My Bot: 
 You: /echo PHP is the best programming language in the world!
 My Bot: PHP is the best programming language in the world!
 ```
-
-::: tip
-
-On default, Kasumi.js only prints message above `INFO` level. You override that by specifing `LOG_LEVEL` environment variable
-
-:::
 

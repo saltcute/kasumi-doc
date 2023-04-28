@@ -35,7 +35,7 @@ class MyCommand extends BaseCommand {
 
 `name` must be unique and **without spaces**. It will be later used to trigger the command. If two or more commands with exact same name was found, the latter one will override the previous one.
 
-Realistically, we would not want to have two command with exactly same names, would we?
+Realistically, you would not want to have two command with exactly same names, would you?
 
 :::
 
@@ -47,7 +47,7 @@ Description is optional.
 
 ## Implement Its Function
 
-Whenever a incoming message matches the name of the command, `BaseCommand.func` will be called. The default value of `BaseCommand.func` will just throw an error, so we need to implement one we self. 
+Whenever a incoming message matches the name of the command, `BaseCommand.func` will be called. The default value of `BaseCommand.func` will just throw an error, so we need to implement one ourself. 
 
 Here is an example of replying back everything the user provide.
 
@@ -124,7 +124,7 @@ $ node --nolazy -r ts-node/register -r tsconfig-paths/register index.ts
 ```
 
 ```sh [JavaScript]
-$ node index.ts
+$ node index.js
 ```
 
 :::
@@ -159,7 +159,7 @@ $ node --nolazy -r ts-node/register -r tsconfig-paths/register index.ts | bunyan
 ```
 
 ```sh [JavaScript]
-$ node index.ts | bunyan -L
+$ node index.js | bunyan -L
 ```
 
 

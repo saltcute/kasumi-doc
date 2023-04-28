@@ -30,11 +30,10 @@ const client = new Kasumi(config);
 
 ```javascript [index.mjs]
 /**
- * Usage of Kasumi.js in ESM projects is a bit broken.
- * Typings will not work correctly in ESM files.
+ * Default export does not work in ESM files for some reasons.
  */
-import Kasumi from 'kasumi.js';
-const client = new Kasumi.default(config);
+import { Kasumi } from 'kasumi.js';
+const client = new Kasumi(config);
 ```
 
 :::

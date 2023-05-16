@@ -15,7 +15,7 @@ import { BaseCommand } from 'kasumi.js';
 ```
 
 ```javascript [index.js]
-const { BaseCommand } = requrie('kasumi.js');
+const { BaseCommand } = require('kasumi.js');
 ```
 
 :::

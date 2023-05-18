@@ -26,7 +26,6 @@ Extend it, and provide it with some custom details.
 class MyMenu extends BaseMenu {
     name = "bot";
     description = "Menu for My Bot";
-    prefix = "/!?.";
 }
 ```
 
@@ -36,9 +35,11 @@ Like commands, `name` must be unique and **without spaces**. It will be used to 
 
 :::
 
-::: tip
+::: danger
 
-`prefix` works by looking for each character in the `prefix` string and try to find a match of `prefix + name`. So at this stage, you can only have a one-character prefix.
+After `Kasumi.js@^3.0.1`, individual menus no longer controls the prefix used to trigger it, as it can only be configured in `client.plugin`.
+
+However, as a bonus, you can now use whatever prefix you want, as long as it does not contain spaces.
 
 :::
 

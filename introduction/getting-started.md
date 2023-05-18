@@ -1,5 +1,11 @@
 # Getting Started
 
+::: tip
+
+You can also start with the [template](https://github.com/hexona69/kasumi-template).
+
+:::
+
 ## Installation
 
 Simply install it from npm:

@@ -37,7 +37,7 @@ Like commands, `name` must be unique and **without spaces**. It will be used to 
 
 ::: danger
 
-After `Kasumi.js@^3.0.1`, individual menus no longer controls the prefix used to trigger it, as it can only be configured in `client.plugin`.
+After `Kasumi.js@^0.3.1`, individual menus no longer controls the prefix used to trigger it, as it can only be configured in `client.plugin`.
 
 However, as a bonus, you can now use whatever prefix you want, as long as it does not contain spaces.
 

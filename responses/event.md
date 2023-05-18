@@ -20,7 +20,7 @@ client.message.on('allTextMessages', (event) => {
 
 ::: tip
 
-In `Kasumi.js@^3.0.0`, the `message.text` event is a combination of `message.text.markdown` and `message.text.plain` for compatibility.
+In `Kasumi.js@^0.3.0`, the `message.text` event is a combination of `message.text.markdown` and `message.text.plain` for compatibility.
 
 However, official KOOK clients now send everything in `message.text.markdown`. `message.text.plain` events triggered by other bots are converted to `message.text.markdown` on KOOK's server.
 

@@ -24,8 +24,16 @@ export default defineConfig({
         items: [
           { text: 'Command', link: '/responses/command' },
           { text: 'Menu', link: '/responses/menu' },
+          { text: 'Plugin', link: '/responses/plugin' },
           { text: 'Events', link: '/responses/event' },
           { text: 'You Did It!', link: '/responses/you-did-it' }
+        ]
+      },
+      {
+        text: 'Build Things!',
+        items: [
+          { text: 'Session', link: '/build/session' },
+          { text: 'Card', link: '/build/card' }
         ]
       }
     ],

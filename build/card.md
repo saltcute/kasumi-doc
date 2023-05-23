@@ -82,14 +82,15 @@ card.addTextWithButton("A text module with image accessory", {
         buttonContent: 'Text on The Button',
         click: 'return-val', // click: 'link',
         value: 'any value',  
-            // When click is `return-val`, 
-            // the string in `value` is sent back to as a `ButtonClickedEvent` to Kasumi.js,
-            // when a user clicks on the button.
-            // When click is `link`, the link in `value` will be opened,
-            // when a user clicks on the button.
         theme: 'info'
     })
 ```
+
+::: tip
+
+When click is `return-val`, the string in `value` is sent back to as a `ButtonClickedEvent` to Kasumi.js, when a user clicks on the button. When click is `link`, the link in `value` will be opened, when a user clicks on the button.
+
+:::
 
 ![text with button module image](/assets/build/card/text/button.png)
 

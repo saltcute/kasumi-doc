@@ -26,12 +26,12 @@ After installation, you can then import Kasumi.js and instantiate a bot client;
 
 ```typescript [index.ts]
 import Kasumi from 'kasumi.js';
-const client = new Kasumi(config);
+const client = new Kasumi();
 ```
 
 ```javascript [index.cjs]
 const Kasumi = require('kasumi.js').default;
-const client = new Kasumi(config);
+const client = new Kasumi();
 ```
 
 ```javascript [index.mjs]
@@ -39,16 +39,21 @@ const client = new Kasumi(config);
  * Default export does not work in ESM files for some reasons.
  */
 import { Kasumi } from 'kasumi.js';
-const client = new Kasumi(config);
+const client = new Kasumi();
 ```
 
 :::
 
-Here, `config` is a `KasumiConfig` object, which needs to be configured as illustrated.
+However, it only throws an `TokenNotProvidedError` at the moment, so we need to provide it with a [KOOK bot token](https://developer.kookapp.cn/app/index).
+
+There are multiple ways of doing that:
+
+### Passing as an Arugument
 
 ::: code-group
 
 ```typescript [WebSocket]
+import Kasumi from 'kasumi.js';
 import type { KasumiConfig } from 'kasumi.js';
 
 const config: KasumiConfig = {
@@ -59,9 +64,12 @@ const config: KasumiConfig = {
     vendor: 'hexona',
     disableSnOrderCheck: true
 };
+
+const client = new Kasumi(config);
 ```
 
 ```typescript [WebHook]
+import Kasumi from 'kasumi.js';
 import type { KasumiConfig } from 'kasumi.js';
 
 const config: KasumiConfig = {
@@ -72,7 +80,75 @@ const config: KasumiConfig = {
     port: 8888,
     disableSnOrderCheck: true
 };
+
+const client = new Kasumi(config);
 ```
+
+:::
+
+### Read From Config File
+
+Create a `.env` file in the root folder of your project or define it in the shell.
+
+```properties
+CONFIG_PATH="/path/to/your/config/file/config.json"
+```
+
+In your `config.json`, writes:
+
+::: code-group
+
+```json [WebSocket]
+{
+    "token": "1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==",
+    "connection": "kookts"
+}
+```
+
+```json [WebHook]
+{
+    "token": "1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==",
+    "connection": "webhook",
+    "webhookVerifyToken": "dFKF2UMYHBPjv2aC",
+    "webhookEncryptKey": "SZ53zF",
+    "webhookPort": 8888
+}
+```
+
+:::
+
+::: tip
+
+You can also add extra properties in the file. You will be able to access them with `client.config.get(key)`.
+
+:::
+
+### Read From Environment Variables
+
+Create a `.env` file in the root folder of your project or define them in the shell.
+
+::: code-group
+
+```properties [WebSocket]
+TOKEN="1/MTE1Nzg=/EitXOAUK10g3ARW6kZ3p7g=="
+CONNECTION=kookts
+```
+
+```properties [WebHook]
+TOKEN="1/MTE1Nzg=/EitXOAUK10g3ARW6kZ3p7g=="
+CONNECTION=webhook
+VERIFY_TOKEN=dFKF2UMYHBPjv2aC
+ENCRYPT_KEY=SZ53zF
+PORT=8888
+```
+
+:::
+
+::: tip Order of Duplicated Keys
+
+When parsing config, enviroment variables are the highest priority, following by config files and config argument.
+
+If duplicated keys were found, values with higher priority will override values with lower priority.
 
 :::
 

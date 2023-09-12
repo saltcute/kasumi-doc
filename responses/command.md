@@ -47,7 +47,7 @@ Description is optional.
 
 ## Implement Its Function
 
-Whenever a incoming message matches the name of the command, `BaseCommand.func` will be called. The default value of `BaseCommand.func` will just throw an error, so we need to implement one ourself. 
+Whenever a incoming message matches the name of the command, `BaseCommand.func` will be called. The default value of `BaseCommand.func` will just throw an error, so we need to implement one ourself to overwrite it. 
 
 Here is an example of replying back everything the user provide.
 
@@ -85,11 +85,11 @@ class MyCommand extends BaseCommand {
 
 :::
 
-At this time, we can just ignore `session` and proceeds next. We will talk about it later.
+At this time, we can just ignore `session` and move on next. We will talk about it later.
 
 ## Load the Command
 
-After implementing the command, we need to tell Kasumi to use it.
+After implementing the command, we need to tell Kasumi to utilize it.
 
 First, we need to instanciate our command.
 
@@ -146,7 +146,7 @@ $ 05:56:28.827  INFO kasumi.webhook: Kasumi starts listening on port 8888
 
 ::: details Outputs are messed up?
 
-Kasumi.js uses [bunyan](https://github.com/trentm/node-bunyan) for logging. You need to install bunyan to see the correctly formatted output.
+Kasumi.js uses [bunyan](https://github.com/trentm/node-bunyan) for logging. You need to install bunyan to see the correctly formatted output. Please refer to [Bunyan CLI Documentation](https://github.com/trentm/node-bunyan#cli-usage).
 
 ```sh
 $ npm install -g bunyan
@@ -173,7 +173,7 @@ On default, Kasumi.js only prints message above `INFO` level. You can override t
 You can now send a message to your bot and expect its reply.
 
 ```txt
-You: /echo PHP is the best programming language in the world!
-My Bot: PHP is the best programming language in the world!
+You: /echo PHP is not the best programming language in the world!
+My Bot: PHP is not the best programming language in the world!
 ```
 

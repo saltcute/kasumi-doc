@@ -36,7 +36,9 @@ const client = new Kasumi();
 
 ```javascript [index.mjs]
 /**
- * Default export does not work in ESM files for some reasons.
+ * Kasumi.js is pretty much broken in ESM
+ * Compatibility with ESM is in TODO, but not ETA will be provided
+ * At the moment, you should use CommonJS instead
  */
 import { Kasumi } from 'kasumi.js';
 const client = new Kasumi();
@@ -59,9 +61,12 @@ import type { KasumiConfig } from 'kasumi.js';
 const config: KasumiConfig = {
     type: 'websocket',
     token: '1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==',
-    // vendor: 'kookts',
-    // vendor: 'botroot'
-    vendor: 'hexona',
+    /**
+     * WebSocket connection mode is proven to be very unreliable
+     * I haven't found a good fix yet
+     * Use WebHook whenever possible
+     */
+    vendor: 'hexona', // or 'kookts', 'botroot'
     disableSnOrderCheck: true
 };
 
@@ -119,7 +124,7 @@ In your `config.json`, writes:
 
 ::: tip
 
-You can also add extra properties in the file. You will be able to access them with `client.config.get(key)`.
+Above properties are require to connect the bot to KOOK. You can also add extra properties in the file. You will be able to access them with `client.config.get(key)`.
 
 :::
 
@@ -164,7 +169,7 @@ The default value in Kasumi.js is false--Enabling sn order check.
 
 In Kasumi.js, encryption is required for WebHook connection mode.
 
-Kasumi.js does not support compression. You must add `?compress=0` to your WebHook callback URL in order to work.
+Kasumi.js does not support compression. You must add `?compress=0` to your WebHook callback URL in order for it to work.
 
 :::
 

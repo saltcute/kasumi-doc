@@ -35,6 +35,14 @@ export default defineConfig({
                     { text: 'Session', link: '/build/session' },
                     { text: 'Card', link: '/build/card' }
                 ]
+            },
+            {
+                text: 'API Reference',
+                items: [
+                    { text: 'Overview', link: '/api/overview' },
+                    { text: 'Guild', link: '/api/guild' },
+                    // { text: 'Channel', link: '/api/channel' }
+                ]
             }
         ],
 

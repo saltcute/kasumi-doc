@@ -88,7 +88,9 @@ card.addTextWithButton("A text module with image accessory", {
 
 ::: tip
 
-When click is `return-val`, the string in `value` is sent back to as a `ButtonClickedEvent` to Kasumi.js, when a user clicks on the button. When click is `link`, the link in `value` will be opened, when a user clicks on the button.
+When `click`'s value is `return-val`, the string in `value` is sent back as a `ButtonClickedEvent` to Kasumi.js upon a user clicks on the button. 
+
+When `click`'s value is `link`, the link in `value` will be opened upon a user clicks on the button.
 
 :::
 

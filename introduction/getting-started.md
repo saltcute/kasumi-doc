@@ -36,11 +36,10 @@ const client = new Kasumi();
 
 ```javascript [index.mjs]
 /**
- * Kasumi.js is pretty much broken in ESM
- * Compatibility with ESM is in TODO, but not ETA will be provided
- * At the moment, you should use CommonJS instead
+ * Kasumi.js is built mainly for TypeScript and CommonJS
+ * ESM support is not guranteed
  */
-import { Kasumi } from 'kasumi.js';
+import Kasumi from 'kasumi.js';
 const client = new Kasumi();
 ```
 

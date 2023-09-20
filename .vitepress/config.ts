@@ -41,7 +41,17 @@ export default defineConfig({
                 items: [
                     { text: 'Overview', link: '/api/overview' },
                     { text: 'Guild', link: '/api/guild' },
-                    // { text: 'Channel', link: '/api/channel' }
+                    { text: 'Channel', link: '/api/channel' },
+                    { text: 'User', link: '/api/user' },
+                    { text: 'Message', link: '/api/message' },
+                    { text: 'Direct Message', link: '/api/directMessage' },
+                    { text: 'Asset', link: '/api/asset' },
+                    { text: 'Badge', link: '/api/badge' },
+                    { text: 'Blacklist', link: '/api/blacklist' },
+                    { text: 'Game', link: '/api/game' },
+                    { text: 'Gateway', link: '/api/gateway' },
+                    { text: 'Intimacy', link: '/api/intimacy' },
+                    { text: 'Invite', link: '/api/invite' }
                 ]
             }
         ],

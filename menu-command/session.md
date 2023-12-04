@@ -41,7 +41,7 @@ session.replyTemp("Text or Card you would like to respond with");
 
 ## Updating
 
-`BaseSession` also includes method to update a message. However, it does now find the message automatically, and a `messageId` is requried.
+`BaseSession` also includes method to update a message. However, it does not find the message automatically, and a `messageId` is requried.
 
 ### Getting Message ID
 
@@ -69,3 +69,9 @@ const messageId = '472e9be0-a7d6-4807-bb04-ba465308c42a';
 const { err } = session.update(messageId, 'New message');
 if (err) throw err;
 ```
+
+:::tips
+
+A message cannot change type after it was sent. For example, you cannot update a text message to a card message.
+
+:::

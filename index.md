@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Kasumi.js"
-  text: "KOOK bot framework in TypeScript"
+  text: "Yet another KOOK bot framework in TypeScript"
   tagline: Which is (hopefully) still being maintained.
   actions:
     - theme: brand
@@ -12,12 +12,12 @@ hero:
       link: /introduction/what-is-kasumi
     - theme: alt
       text: View on GitHub
-      link: https://github.com/Hexona69/kasumi
+      link: https://github.com/HexaNona/kasumi
 
 features:
   - title: Features? Never heard of that.
     details: Kasumi.js is built from ground up for me to practise while having fun.
-  - title: Stablility? What a daydream.
+  - title: Stablility? Good effort blud.
     details: Kasumi.js aims for the uttermost stablity. The reality? At lease we tried.
   - title: Community? More like absolutely-no-one-ity.
     details: No body even use it! Haven't you heard of kBotify?

@@ -30,10 +30,18 @@ export default defineConfig({
                 ]
             },
             {
-                text: 'Build Things!',
+                text: 'Menu & Command',
                 items: [
-                    { text: 'Session', link: '/build/session' },
-                    { text: 'Card', link: '/build/card' }
+                    { text: 'Session', link: '/menu-command/session' },
+                    { text: 'Card', link: '/menu-command/card' },
+                    { text: 'Middleware', link: '/menu-command/middleware' },
+                    { text: 'Event Callback', link: '/menu-command/event-callback' }
+                ]
+            },
+            {
+                text: 'Config & Storage',
+                items: [
+                    { text: 'Overview', link: '/config-storage/overview' }
                 ]
             },
             {
@@ -57,12 +65,12 @@ export default defineConfig({
         ],
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/hexona69/kasumi' },
-            { icon: 'twitter', link: 'https://twitter.com/hexona_ch' }
+            { icon: 'github', link: 'https://github.com/HexaNona/kasumi' },
+            { icon: 'twitter', link: 'https://twitter.com/saltcutep' }
         ],
 
         editLink: {
-            pattern: 'https://github.com/Hexona69/kasumi-doc/edit/main/docs/:path'
+            pattern: 'https://github.com/HexaNona/kasumi-doc/edit/main/docs/:path'
         }
     }
 })

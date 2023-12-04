@@ -22,7 +22,7 @@ client.API.message.create(MessageType.CardMessage, card);
 
 :::
 
-![empty card image](/assets/build/card/empty.png)
+![empty card image](/assets/menu-command/card/empty.png)
 
 ## Multiple Cards
 
@@ -44,7 +44,7 @@ client.API.message.create(MessageType.CardMessage, cards);
 
 :::
 
-![multiple card image](/assets/build/card/text/multiple.png)
+![multiple card image](/assets/menu-command/card/text/multiple.png)
 
 ## Text
 
@@ -54,7 +54,7 @@ Add a markdown format text.
 card.addText("A text module");
 ```
 
-![simple text module image](/assets/build/card/text/simple.png)
+![simple text module image](/assets/menu-command/card/text/simple.png)
 
 ### Image Accessory
 
@@ -72,13 +72,12 @@ card.addTextWithImage("A text module with image accessory", {
 });
 ```
 
-![text with image module image](/assets/build/card/text/image.png)
+![text with image module image](/assets/menu-command/card/text/image.png)
 
 ### Button Accessory
 
 ```typescript
 card.addTextWithButton("A text module with image accessory", {
-        position: 'right',
         buttonContent: 'Text on The Button',
         click: 'return-val', // click: 'link',
         value: 'any value',  
@@ -94,6 +93,6 @@ When `click`'s value is `link`, the link in `value` will be opened upon a user c
 
 :::
 
-![text with button module image](/assets/build/card/text/button.png)
+![text with button module image](/assets/menu-command/card/text/button.png)
 
 

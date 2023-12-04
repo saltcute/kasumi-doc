@@ -22,7 +22,7 @@ class MyCommand extends BaseCommand {
     name = "echo";
     description = "Reply back what you say";
 
-    func: CommandFunction<BaseSession, void> = async (session) => { 
+    async func(session: BaseSession): Promise<void> { 
         session.reply(session.args.join(' '));                      
     }                                                               
 }
@@ -35,7 +35,9 @@ class MyMenu extends BaseMenu {
 
 const command = new MyCommand();
 const menu = new MyMenu(command);
+
 client.plugin.load(menu);
+client.plugin.addPrefix("/", "!", "?", ".");
 client.connect();
 ```
 
@@ -58,7 +60,7 @@ class MyCommand extends BaseCommand {
     name = "echo";
     description = "Reply back what you say";
 
-    func = async (session) => { 
+    async func(session) { 
         session.reply(session.args.join(' '));                      
     }                                                               
 }
@@ -66,12 +68,13 @@ class MyCommand extends BaseCommand {
 class MyMenu extends BaseMenu {
     name = "bot";
     description = "Menu for My Bot";
-    prefix = "/!?.";
 }
 
 const command = new MyCommand();
 const menu = new MyMenu(command);
+
 client.plugin.load(menu);
+client.plugin.addPrefix("/", "!", "?", ".");
 client.connect();
 ```
 

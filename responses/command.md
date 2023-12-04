@@ -33,7 +33,7 @@ class MyCommand extends BaseCommand {
 
 ::: warning
 
-`name` must be unique and **without spaces**. It will be later used to trigger the command. If two or more commands with exact same name was found, the latter one will override the previous one.
+`name` must be unique and **without spaces**. It will be later used to trigger the command. If two or more commands with exact same name was found in the same layer, the latter one will override the previous one.
 
 Realistically, you would not want to have two command with exactly same names, would you?
 
@@ -62,7 +62,7 @@ class MyCommand extends BaseCommand {
     name = "echo";
     description = "Reply back what you say";
 
-    func: CommandFunction<BaseSession, void> = async (session) => { // [!code focus]
+    async func(session: BaseSession): Promise<void> {               // [!code focus]
         session.reply(session.args.join(' '));                      // [!code focus]
     }                                                               // [!code focus]
 }
@@ -77,7 +77,7 @@ class MyCommand extends BaseCommand {
     name = "echo";
     description = "Reply back what you say";
     
-    func = async (session) => {                         // [!code focus]
+    async func (session) {                              // [!code focus]
         session.reply(session.args.join(' '));          // [!code focus]
     }                                                   // [!code focus]
 }
@@ -85,7 +85,7 @@ class MyCommand extends BaseCommand {
 
 :::
 
-At this time, we can just ignore `session` and move on next. We will talk about it later.
+At this moment, we can safely ignore `session` and move on to the next. We will talk about it later.
 
 ## Load the Command
 
@@ -167,6 +167,10 @@ $ node index.js | bunyan -L
 ::: tip
 
 On default, Kasumi.js only prints message above `INFO` level. You can override that by specifing `LOG_LEVEL` environment variable
+
+On `LOG_LEVEL=DEBUG`, Kasumi will log every API call error it has recieved.
+
+On `LOG_LEVEL=TRACE`, Kasumi will log every API call it has made.
 
 :::
 

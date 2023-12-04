@@ -2,7 +2,7 @@
 
 ::: tip
 
-You can also start with the [template](https://github.com/hexona69/kasumi-template).
+You can also start with the [template](https://github.com/HexaNona/kasumi-template).
 
 :::
 
@@ -36,7 +36,6 @@ const client = new Kasumi();
 
 ```javascript [index.mjs]
 /**
- * Kasumi.js is built mainly for TypeScript and CommonJS
  * ESM support is not guranteed
  */
 import Kasumi from 'kasumi.js';
@@ -49,7 +48,7 @@ However, it only throws an `TokenNotProvidedError` at the moment, so we need to 
 
 There are multiple ways of doing that:
 
-### Passing as an Arugument
+### Passing as an Constructor Arugument
 
 ::: code-group
 
@@ -64,6 +63,7 @@ const config: KasumiConfig = {
      * WebSocket connection mode is proven to be very unreliable
      * I haven't found a good fix yet
      * Use WebHook whenever possible
+     * Update 2023/12/03: WebHook also bugs out sometimes now :(
      */
     vendor: 'hexona', // or 'kookts', 'botroot'
     disableSnOrderCheck: true
@@ -104,18 +104,18 @@ In your `config.json`, writes:
 
 ```json [WebSocket]
 {
-    "token": "1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==",
-    "connection": "kookts"
+    "kasumi::config.token": "1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==",
+    "kasumi::config.connection": "kookts"
 }
 ```
 
 ```json [WebHook]
 {
-    "token": "1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==",
-    "connection": "webhook",
-    "webhookVerifyToken": "dFKF2UMYHBPjv2aC",
-    "webhookEncryptKey": "SZ53zF",
-    "webhookPort": 8888
+    "kasumi::config.token": "1/CR4Zyt=/thUr5d4YVme50pLSq5Ee9MA==",
+    "kasumi::config.connection": "webhook",
+    "kasumi::config.webhookVerifyToken": "dFKF2UMYHBPjv2aC",
+    "kasumi::config.webhookEncryptKey": "SZ53zF",
+    "kasumi::config.webhookPort": 8888
 }
 ```
 
@@ -123,7 +123,7 @@ In your `config.json`, writes:
 
 ::: tip
 
-Above properties are require to connect the bot to KOOK. You can also add extra properties in the file. You will be able to access them with `client.config.get(key)`.
+Above properties are require to connect the bot to KOOK. You can also add extra properties in the file. You will be able to access them with `client.config.getSync(key)` or `client.config.getOne(key)`, learn more on [Config & Storage](/config-storage/overview).
 
 :::
 
@@ -158,9 +158,9 @@ If duplicated keys were found, values with higher priority will override values 
 
 ::: warning Disable SN Order Check?
 
-Disabling sn order check is recommend against by KOOK. However, it is proven to cause problems in real situation to enable it. Some frameworks like khl.py decided to not follow the order, while some like KookBC decides to strictly do. You can compare the two options and decide for yourself.
+Disabling sn order check is recommend against by KOOK. However, it is proven to cause problems in real situation to enable it. Some frameworks like `khl.py` decided to not follow the order, while some like `KookBC` decides to strictly do. You can compare the two options and decide for yourself.
 
-The default value in Kasumi.js is false--Enabling sn order check.
+The default value in Kasumi.js is `false`--Enabling sn order check.
 
 :::
 
@@ -168,7 +168,7 @@ The default value in Kasumi.js is false--Enabling sn order check.
 
 In Kasumi.js, encryption is required for WebHook connection mode.
 
-Kasumi.js does not support compression. You must add `?compress=0` to your WebHook callback URL in order for it to work.
+Kasumi.js does **not** support compression. You must add `?compress=0` to your WebHook callback URL in order for it to work.
 
 :::
 

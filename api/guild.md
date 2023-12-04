@@ -7,15 +7,13 @@ Get a list of guilds the bot has joined in, in multi-page format.
 ### Type Definition
 
 ```typescript 
-API.guild.list(page?: number, pageSize?: number): AsyncGenerator<RequestResponse<RawGuildListResponse>, void, unknown>;
+client.API.guild.list(page?: number, pageSize?: number): AsyncGenerator<RequestResponse<RawGuildListResponse>, void, unknown>;
 ```
 
 ### Usage
 
 ```typescript
-const guildList = client.API.guild.list();
-
-for await (const { err, data } of guildList) {
+for await (const { err, data } of client.API.guild.list()) {
     if (err) {
         client.logger.error(err);
         break;
@@ -29,7 +27,7 @@ for await (const { err, data } of guildList) {
 ### Type Definition
 
 ```typescript
-API.guild.view(guildId: string): Promise<RequestResponse<RawGuildViewResponse>>;
+client.API.guild.view(guildId: string): Promise<RequestResponse<RawGuildViewResponse>>;
 ```
 
 ### Usage
@@ -37,7 +35,48 @@ API.guild.view(guildId: string): Promise<RequestResponse<RawGuildViewResponse>>;
 ```typescript
 const guildId = "3272780758159737";
 
-const guildDetail = await client.API.guild.view(guildId);
+const { err, data } = await client.API.guild.view(guildId);
 
-client.logger.info(guildDetail);
+if (err) {
+    client.logger.error(err);
+    return;
+}
+
+client.logger.info(data);
+```
+
+## `API.guild.userList()`
+
+### Type Definition
+
+```typescript
+client.API.guild.userList({ guildId, channelId, search, roleId, mobileVerified, lastSeen, joinTime, page, pageSize, userId }: {
+    guildId: string;
+    channelId?: string;
+    search?: string;
+    roleId?: number;
+    mobileVerified?: boolean;
+    lastSeen?: 'desc' | 'asc';
+    joinTime?: 'desc' | 'asc';
+    page: number;
+    pageSize: number;
+    userId?: number;
+}): AsyncGenerator<RequestResponse<RawGuildUserListResponse>, void, unknown>;
+```
+### Usage
+
+
+```typescript
+const guildId = "3272780758159737",
+      channelId = "1510119803594291";
+for await (const { err, data } of client.API.guild.list({
+    guildId,
+    channelId
+})) {
+    if (err) {
+        client.logger.error(err);
+        break;
+    }
+    client.logger.info(data);
+}
 ```

@@ -70,7 +70,7 @@ export default defineConfig({
         ],
 
         editLink: {
-            pattern: 'https://github.com/HexaNona/kasumi-doc/edit/main/docs/:path'
+            pattern: 'https://github.com/saltcute/kasumi-doc/edit/main/:path'
         }
     }
 })

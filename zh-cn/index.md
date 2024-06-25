@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /introduction/what-is-kasumi
+      link: /zh-cn/introduction/what-is-kasumi
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/HexaNona/kasumi

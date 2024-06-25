@@ -1,17 +1,11 @@
 import { defineConfig } from 'vitepress'
-import enCA from './locales/en-ca'
-import zhCN from './locales/zh-cn'
-import zhTW from './locales/zh-tw'
+import locales from './locales'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: "Kasumi.js",
     description: "A KOOK bot framework in TypeScript",
-    locales: {
-        "en-ca": enCA,
-        "zh-cn": zhCN,
-        "zh-tw": zhTW
-    },
+    locales: locales(), 
     themeConfig: {
         socialLinks: [
             { icon: 'github', link: 'https://github.com/HexaNona/kasumi' },

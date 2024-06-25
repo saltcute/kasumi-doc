@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /introduction/what-is-kasumi
+      link: /en-ca/introduction/what-is-kasumi
     - theme: alt
       text: View on GitHub
       link: https://github.com/HexaNona/kasumi

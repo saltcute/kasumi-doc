@@ -1,8 +1,8 @@
 {
     "redirects": [
         {
-            "source": "/:path((?!zh-cn/|zh-tw/|en-ca/).*)",
-            "destination": "/en-us/:path*",
+            "source": "/:path((?!zh-cn/|zh-tw/|en-us/).*)",
+            "destination": "/en-ca/:path*",
             "permanent": true
         }
     ]

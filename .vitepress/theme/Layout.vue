@@ -10,7 +10,7 @@ watchEffect(() => {
     }
 })
 
-window.location.pathname === '/' && window.location.replace('/en-us/')
+window.location.pathname === '/' && window.location.replace('/en-ca/')
 </script>
 
 <template>

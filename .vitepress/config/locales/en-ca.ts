@@ -3,63 +3,63 @@ import { DefaultTheme, LocaleConfig } from "vitepress";
 const enCA: LocaleConfig<DefaultTheme.Config>[string] = {
     label: 'English (Canada)',
     lang: 'en-ca',
-    link: '/en-ca',
+    link: '/en-ca/',
     themeConfig: {
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Quick Start', link: '/introduction/what-is-kasumi' }
+            { text: 'Home', link: '/en-ca/' },
+            { text: 'Quick Start', link: '/en-ca/introduction/what-is-kasumi' }
         ],
 
         sidebar: [
             {
                 text: 'Introduction',
                 items: [
-                    { text: 'What is Kasumi.js?', link: '/introduction/what-is-kasumi' },
-                    { text: 'Getting Started', link: '/introduction/getting-started' }
+                    { text: 'What is Kasumi.js?', link: '/en-ca/introduction/what-is-kasumi' },
+                    { text: 'Getting Started', link: '/en-ca/introduction/getting-started' }
                 ]
             },
             {
                 text: 'Get Responses',
                 items: [
-                    { text: 'Command', link: '/responses/command' },
-                    { text: 'Menu', link: '/responses/menu' },
-                    { text: 'Plugin', link: '/responses/plugin' },
-                    { text: 'Events', link: '/responses/event' },
-                    { text: 'You Did It!', link: '/responses/you-did-it' }
+                    { text: 'Command', link: '/en-ca/responses/command' },
+                    { text: 'Menu', link: '/en-ca/responses/menu' },
+                    { text: 'Plugin', link: '/en-ca/responses/plugin' },
+                    { text: 'Events', link: '/en-ca/responses/event' },
+                    { text: 'You Did It!', link: '/en-ca/responses/you-did-it' }
                 ]
             },
             {
                 text: 'Menu & Command',
                 items: [
-                    { text: 'Session', link: '/menu-command/session' },
-                    { text: 'Card', link: '/menu-command/card' },
-                    { text: 'Middleware', link: '/menu-command/middleware' },
-                    { text: 'Event Callback', link: '/menu-command/event-callback' }
+                    { text: 'Session', link: '/en-ca/menu-command/session' },
+                    { text: 'Card', link: '/en-ca/menu-command/card' },
+                    { text: 'Middleware', link: '/en-ca/menu-command/middleware' },
+                    { text: 'Event Callback', link: '/en-ca/menu-command/event-callback' }
                 ]
             },
             {
                 text: 'Config & Storage',
                 items: [
-                    { text: 'Overview', link: '/config-storage/overview' },
-                    { text: 'Custom Storage', link: '/config-storage/custom-storage' }
+                    { text: 'Overview', link: '/en-ca/config-storage/overview' },
+                    { text: 'Custom Storage', link: '/en-ca/config-storage/custom-storage' }
                 ]
             },
             {
                 text: 'API Reference',
                 items: [
-                    { text: 'Overview', link: '/api/overview' },
-                    { text: 'Guild', link: '/api/guild' },
-                    { text: 'Channel', link: '/api/channel' },
-                    { text: 'User', link: '/api/user' },
-                    { text: 'Message', link: '/api/message' },
-                    { text: 'Direct Message', link: '/api/directMessage' },
-                    { text: 'Asset', link: '/api/asset' },
-                    { text: 'Badge', link: '/api/badge' },
-                    { text: 'Blacklist', link: '/api/blacklist' },
-                    { text: 'Game', link: '/api/game' },
-                    { text: 'Gateway', link: '/api/gateway' },
-                    { text: 'Intimacy', link: '/api/intimacy' },
-                    { text: 'Invite', link: '/api/invite' }
+                    { text: 'Overview', link: '/en-ca/api/overview' },
+                    { text: 'Guild', link: '/en-ca/api/guild' },
+                    { text: 'Channel', link: '/en-ca/api/channel' },
+                    { text: 'User', link: '/en-ca/api/user' },
+                    { text: 'Message', link: '/en-ca/api/message' },
+                    { text: 'Direct Message', link: '/en-ca/api/directMessage' },
+                    { text: 'Asset', link: '/en-ca/api/asset' },
+                    { text: 'Badge', link: '/en-ca/api/badge' },
+                    { text: 'Blacklist', link: '/en-ca/api/blacklist' },
+                    { text: 'Game', link: '/en-ca/api/game' },
+                    { text: 'Gateway', link: '/en-ca/api/gateway' },
+                    { text: 'Intimacy', link: '/en-ca/api/intimacy' },
+                    { text: 'Invite', link: '/en-ca/api/invite' }
                 ]
             }
         ]

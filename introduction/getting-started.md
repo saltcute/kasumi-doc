@@ -100,6 +100,12 @@ CONFIG_PATH="/path/to/your/config/file/config.json"
 
 In your `config.json`, writes:
 
+::: tip
+
+`kasumi.js` use `json5`, which also support `jsonc` or `json`.
+
+:::
+
 ::: code-group
 
 ```json [WebSocket]
@@ -123,7 +129,7 @@ In your `config.json`, writes:
 
 ::: tip
 
-Above properties are require to connect the bot to KOOK. You can also add extra properties in the file. You will be able to access them with `client.config.getSync(key)` or `client.config.getOne(key)`, learn more on [Config & Storage](/config-storage/overview).
+The properties above are the minumun requirement to connect the bot to KOOK. You can also add arbitrary extra properties in the file. You will be able to access them with `client.config.getSync(key)` or `await client.config.getOne(key)`, learn more on [Config & Storage](/config-storage/overview).
 
 :::
 

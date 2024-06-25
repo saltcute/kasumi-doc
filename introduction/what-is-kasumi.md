@@ -1,8 +1,8 @@
 ::: warning
 
-Kasumi.js is wrote and tested mainly aginast macOS Ventura 13.1 and Ubuntu 22.04 LTS on Node.js v18. Availablity of certain feature may vary on other platforms (like Windows).
+Kasumi.js is tested against Ubuntu 22.04 LTS on Node.js v18. Availablity of certain feature may vary on other platforms (like Windows).
 
-This documentation is still WIP. Contribute [here](https://github.com/HexaNona/kasumi-doc)!
+This documentation is still WIP. Contribute [here](https://github.com/saltcute/kasumi-doc)!
 
 :::
 

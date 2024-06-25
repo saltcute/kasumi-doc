@@ -1,15 +1,15 @@
-# What is Kasumi.js?
+# 什么是 Kasumi.js?
 
 ::: warning
 
-Kasumi.js is tested against Ubuntu 22.04 LTS on Node.js v18. Availablity of certain feature may vary on other platforms (like Windows).
+Kasumi.js 在 Ubuntu 22.04 LTS 上的 Node.js v18 测试。一些功能在其他平台（比如 Windows）上的可用性不能做保证。
 
-This documentation is still WIP. Contribute [here](https://github.com/saltcute/kasumi-doc)!
+文档还在施工中。在[这里](https://github.com/saltcute/kasumi-doc)贡献！
 
 :::
 
-[Kasumi.js](https://www.npmjs.com/package/kasumi.js) is a easy to use framework for building KOOK bots.
+[Kasumi.js](https://www.npmjs.com/package/kasumi.js) 是一个用来构建 KOOK 机器人的简单易用的框架。
 
-## Wow, then what is it good for?
+## 哇，那它有什么好呢？
 
-I don't even know. The only reason you should use Kasumi.js is probably the fact that no other TypeScript libraries for KOOK are still under active maintainance, oof.
+我也不知道。你应该使用 Kasumi.js 的唯一原因应该就是没有其他 TypeScript 语言的 KOOK 库还在积极开发中了，真扎心。

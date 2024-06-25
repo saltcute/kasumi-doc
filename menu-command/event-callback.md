@@ -4,7 +4,7 @@ Event callbacks are a easy way to handle user response from either a text messag
 
 ## Text Events
 
-When creating an async callback, you need to provide a `filter` function and a `callback` function. If the `filter` function returns `true`, the `callback` function will be called with the event as its argument. The return value of the callback function will be reolsved as the return value of `createAsyncCallback`. `createAsyncCallback` will reject after `timeout` milliseconds if the promise is not resolved. `timeout` is optional and defaults to `30000`.
+When creating an async callback, you need to provide a `filter` function and a `callback` function. If the `filter` function returns `true`, the `callback` function will be called with the event as its argument. The return value of the callback function will be reolsved as the return value of `createAsyncCallback`. `createAsyncCallback` will reject after `timeout` milliseconds if the there are no events that make the `filter` function return `true`. `timeout` is optional and defaults to `30000`.
 
 ```typescript
 const event = await client.events.callback.createAsyncCallback("message.text", (event) => {
@@ -15,7 +15,7 @@ const event = await client.events.callback.createAsyncCallback("message.text", (
 }, 3000);
 ```
 
-There is also `createCallback` and `createSingleCallback` that works similarly but is a standard synchronus callback function.
+There is also `createCallback` and `createSingleCallback` that works similarly but is a standard synchronus callback function. `createCallback` callbacks are reusable. The `callback` function will be called each time a event makes the `filter` function returns `true`. `callback` function of `createSingleCallback` will be call once at most.
 
 ::: code-group
 

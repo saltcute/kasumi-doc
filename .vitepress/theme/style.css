@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Rubik:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 :root {
-    --vp-font-family-base: Rubik, 'M PLUS Rounded 1c', sans-serif;
+    --vp-font-family-base: "Comfortaa", "Gen Jyuu Gothic Regular", "GenSenRounded TW R", sans-serif;
+}
+
+:root [lang^="zh"],
+:root [lang^="zh-TW"] {
+    --vp-font-family-base: "Comfortaa", "Gen Jyuu Gothic Regular", "GenSenRounded TW R", sans-serif;
+}
+
+:root [lang^="zh-CN"] {
+    --vp-font-family-base: "Comfortaa", "Gen Jyuu Gothic Regular", "JiangChengYuanTi", sans-serif;
 }

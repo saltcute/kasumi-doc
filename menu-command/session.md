@@ -70,8 +70,8 @@ const { err } = session.update(messageId, 'New message');
 if (err) throw err;
 ```
 
-:::tips
+:::tip
 
-A message cannot change type after it was sent. For example, you cannot update a text message to a card message.
+The type of a message cannot be changed after it was sent. For example, you cannot update a text message to be a card message.
 
 :::

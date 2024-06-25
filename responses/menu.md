@@ -35,9 +35,9 @@ Like commands, `name` must be unique and **without spaces**. It will be used to 
 
 :::
 
-::: tips
+::: tip
 
-In fact, every `BaseMenu` is also a `BaseCommand` with a predefined `func` that will execute the commands inside the menu. This also means that you can have a `BaseMenu` load another `BaseMenu` and it will work just as you imagined, like `/menu1 menu2 command1`.
+In fact, every `BaseMenu` is also a `BaseCommand` with a predefined `func` that will execute the commands inside the menu. This means that you can have a `BaseMenu` load another `BaseMenu` and it will work just as you imagined, like `/menu1 menu2 command1`.
 
 :::
 

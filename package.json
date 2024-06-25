@@ -4,7 +4,9 @@
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },
+  "type": "module",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.74"
+    "vitepress": "^1.2.3",
+    "vue": "^3.4.30"
   }
 }

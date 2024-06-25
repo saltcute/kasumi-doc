@@ -14,4 +14,14 @@ export default defineConfig({
         "zh-cn": zhCN,
         "zh-tw": zhTW
     },
+    themeConfig: {
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/HexaNona/kasumi' },
+            { icon: 'twitter', link: 'https://twitter.com/saltcutep' }
+        ],
+
+        editLink: {
+            pattern: 'https://github.com/saltcute/kasumi-doc/edit/main/:path'
+        }
+    }
 })

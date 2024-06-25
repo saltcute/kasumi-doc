@@ -2,10 +2,9 @@ import { DefaultTheme, LocaleConfig } from "vitepress";
 
 const enUS: LocaleConfig<DefaultTheme.Config>[string] = {
     label: 'English (United States)',
-    lang: 'en-US',
-    link: '/en-US',
+    lang: 'en-us',
+    link: '/en-us',
     themeConfig: {
-        // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Quick Start', link: '/introduction/what-is-kasumi' }
@@ -63,16 +62,7 @@ const enUS: LocaleConfig<DefaultTheme.Config>[string] = {
                     { text: 'Invite', link: '/api/invite' }
                 ]
             }
-        ],
-
-        socialLinks: [
-            { icon: 'github', link: 'https://github.com/HexaNona/kasumi' },
-            { icon: 'twitter', link: 'https://twitter.com/saltcutep' }
-        ],
-
-        editLink: {
-            pattern: 'https://github.com/saltcute/kasumi-doc/edit/main/:path'
-        }
+        ]
     }
 }
 

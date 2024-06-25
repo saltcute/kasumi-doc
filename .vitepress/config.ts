@@ -41,7 +41,8 @@ export default defineConfig({
             {
                 text: 'Config & Storage',
                 items: [
-                    { text: 'Overview', link: '/config-storage/overview' }
+                    { text: 'Overview', link: '/config-storage/overview' },
+                    { text: 'Custom Storage', link: '/config-storage/custom-storage' }
                 ]
             },
             {
